@@ -7,4 +7,14 @@ class MainController < ApplicationController
     puts "calling show"
     @photo = Photo.find(params[:photo_id])
   end
+
+  def add_comment
+    puts "Adding comment "
+    puts "Photo id #{params[:photo_id]}"
+    puts "username #{params[:username]}"
+    puts "comment #{params[:comment]}"
+
+    redirect_to show_gallery_photo_path(params[:photo_id])
+
+  end
 end
