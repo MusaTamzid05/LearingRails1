@@ -1,0 +1,40 @@
+<div class = "container text-center">
+  <div class="row">
+    <div class="col-1">
+      <%= link_to "Back", root_path, class: "btn btn-primary" %>
+    </div>
+    <div class="col-11">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-6">
+      <img src="https://picsum.photos/200/300" class="img-fluid">
+    </div>
+
+    <div class="col-6">
+	  <table class="table">
+		<thead>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>Caption</td>
+            <td><%= @photo.caption %></td>
+		  </tr>
+		  <tr>
+			<td>Likes</td>
+            <td><%= @photo.like  %></td>
+		  </tr>
+		  <tr>
+			<td>Dislikes</td>
+            <td><%= @photo.dislike %></td>
+		  </tr>
+		</tbody>
+	  </table>
+
+
+    </div>
+
+  </div>
+
+</div>

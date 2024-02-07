@@ -7,7 +7,7 @@
                 <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
                 <h5 class="card-title"><%= photo.caption %></h5>
                 <div class="card-body">
-                  <a href="" class="btn btn-primary">Show</a>
+                  <%= link_to "Show", show_gallery_photo_path(photo_id: photo.id), class: "btn btn-primary" %>
                 </div> <!-- Card body -->
               </div> <!-- Card -->
             </div> <!-- Col -->
