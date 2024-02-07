@@ -1,35 +1,17 @@
 <div class="container text-center">
-  <div class="row">
-
-    <div class="col">
-	  <div class="card" style="width: 18rem;">
-		<img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
-        <h5 class="card-title">Card title</h5>
-        <div class="card-body">
-          <a href="" class="btn btn-primary">Show</a>
-        </div> <!-- Card body -->
-	  </div> <!-- Card -->
-    </div> <!-- Col -->
-
-    <div class="col">
-	  <div class="card" style="width: 18rem;">
-		<img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
-        <h5 class="card-title">Card title</h5>
-        <div class="card-body">
-          <a href="" class="btn btn-primary">Show</a>
-        </div> <!-- Card body -->
-	  </div> <!-- Card -->
-    </div> <!-- Col -->
-    <div class="col">
-
-	  <div class="card" style="width: 18rem;">
-		<img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
-        <h5 class="card-title">Card title</h5>
-        <div class="card-body">
-          <a href="" class="btn btn-primary">Show</a>
-        </div> <!-- Card body -->
-	  </div> <!-- Card -->
-    </div> <!-- Col -->
-
-  </div> <!-- Row -->
+    <% @photos.each_slice(3) do |row| %>
+      <div class="row mt-5">
+        <% row.each do |photo|  %>
+            <div class="col">
+              <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
+                <h5 class="card-title"><%= photo.caption %></h5>
+                <div class="card-body">
+                  <a href="" class="btn btn-primary">Show</a>
+                </div> <!-- Card body -->
+              </div> <!-- Card -->
+            </div> <!-- Col -->
+        <% end %>
+      </div> <!-- Row -->
+    <% end %>
 </div>
