@@ -14,6 +14,9 @@ class MainController < ApplicationController
     puts "username #{params[:username]}"
     puts "comment #{params[:comment]}"
 
+    comment = Comment.create(name: params[:username], text: params[:comment], photo_id: params[:photo_id])
+    puts comment
+
     redirect_to show_gallery_photo_path(params[:photo_id])
 
   end
